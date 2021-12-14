@@ -69,7 +69,7 @@ ECHO Installing Maven dependencies from /shodan-maven/pom.xml/...
 ECHO.
 
 cd shodan-maven
-CALL mvn clean install
+CALL mvn clean install -DskipTests=true
 cd ..
 
 ECHO.
@@ -77,18 +77,6 @@ ECHO.
 ECHO Opening Visual Studio Code... [use: mvn tomcat7:run to start]
 
 CALL code commons/shodan-workspace.code-workspace -g shodan-maven/README.md
-
-ECHO.
-
-ECHO Download [{vhs.mp4} ~ 105mb]
-ECHO Non chiudere la shell durante il download.
-ECHO Se non si è su Linux, si potrebbero incontrare errori.
-
-ECHO.
-
-curl.exe -o shodan-maven/src/main/webapp/Static/Assets/VHS.mp4 https://lppeba.sn.files.1drv.com/y4muNu-ZDTyK7SgY3DK5whAI_NcQYBFO8UdhtMsUKtdMi1tFXTBpuIPBGzMa9a4LiGiak3kSkN_7Lrd3yHm29t3N79vNCMaevxs7y0iErzQEm_nRZGl9Q4DZpqx6bPkkqGrYNTkxK9SJ3XySSiu0dDM2ku-gTPlGKVLLX4GN7IW1uwh-cA6ZWpGcVFlsYgMRcUf/VHS.mp4?download&psid=1
-
-ECHO.
 
 ECHO Installazione conclusa. E' possibile chiudere la finestra. 
 
